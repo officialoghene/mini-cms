@@ -1,10 +1,10 @@
 <?php
 
-$router->get('', 'controllers/index.php');
-$router->get('profile', 'controllers/profile.php');
-$router->get('contact', 'controllers/contact.php');
-$router->get('about', 'controllers/about.php');
-$router->get('', 'controllers/index.php');
+$router->get('', 'PagesController@home');
+//$router->get('profile', 'PagesController@profile');
+$router->get('contact', 'PagesController@contact');
+$router->get('about', 'PagesController@about');
+$router->get('users', 'UsersController@index');
 
-$router->post('names', 'controllers/add-name.php');
-$router->post('tasks', 'controllers/add-task.php');
+$router->post('users', 'UsersController@store');
+$router->post('tasks', 'PagesController@tasks');
